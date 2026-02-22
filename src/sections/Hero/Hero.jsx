@@ -1,33 +1,47 @@
 import styles from "./HeroStyles.module.css";
-import HeroImg from "../../assets/IsaacWhite (5).jpg";
-import themeIcon from "../../assets/sun.svg";
-import twitterIcon from "../../assets/twitter-light.svg";
-import githubIcon from "../../assets/github-light.svg";
-import linkedinIcon from "../../assets/linkedin-light.svg";
+import heroImg from "../../assets/eu.png";
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
+import twitterLight from "../../assets/twitter-light.svg";
+import twitterDark from "../../assets/twitter-dark.svg";
+import githubLight from "../../assets/github-light.svg";
+import githubDark from "../../assets/github-dark.svg";
+import linkedinLight from "../../assets/linkedin-light.svg";
+import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/cva.pdf";
+import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {
+  const { theme, toggleTheme } = useTheme();
+
+  const themeIcon = theme === "light" ? sun : moon;
+  const twitterIcon = theme === "light" ? twitterLight : twitterDark;
+  const githubIcon = theme === "light" ? githubLight : githubDark;
+  const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
+
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
         <img
-          classname={styles.hero}
-          src={HeroImg}
-          alt="porfifolio foto isaac"
+          src={heroImg}
+          className={styles.hero}
+          alt="Profile picture of Harris Johnsen"
         />
+        <p />
         <img
           className={styles.colorMode}
           src={themeIcon}
-          alt="color mode icon"
+          alt="Color mode icon"
+          onClick={toggleTheme}
         />
       </div>
       <div className={styles.info}>
         <h1>
-          isaac <br></br>
-          gabriel
+          Harris
+          <br />
+          Johnsen
         </h1>
-        <h2>Front End Developer</h2>
-
+        <h2>Frontend Developer</h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
