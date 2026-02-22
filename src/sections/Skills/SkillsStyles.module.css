@@ -45,3 +45,7 @@ hr {
     width: 300px;
   }
 }
+
+.container {
+  padding-top: 80px; 
+}

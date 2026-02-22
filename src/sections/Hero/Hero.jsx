@@ -1,5 +1,5 @@
 import styles from "./HeroStyles.module.css";
-import heroImg from "../../assets/eu.png";
+import heroImg from "../../assets/eu (1).png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
 import twitterLight from "../../assets/twitter-light.svg";
@@ -37,25 +37,28 @@ function Hero() {
       </div>
       <div className={styles.info}>
         <h1>
-          Harris
+          Isaac
           <br />
-          Johnsen
+          Gabriel
         </h1>
-        <h2>Frontend Developer</h2>
+        <h2>Software Engineer</h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/Isaacovski" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/isaac-gabriel-martins/"
+            target="_blank"
+          >
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
         <p className={styles.description}>
-          With a passion for developing modern React web apps for commercial
-          businesses.
+          Curioso por tecnologia e apaixonado por aprender algo novo todos os
+          dias
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
