@@ -1,7 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import Jus from "../../assets/advogada.png";
-import Barbearia from "../../assets/Barbearia.png";
-import salao from "../../assets/salao de beleza.png";
+import Api from "../../assets/Api2.png";
+import Livraria from "../../assets/Livraria.png";
 import Loja from "../../assets/loja de roupas.jpg";
 import ProjectCard from "../../common/ProjectCard";
 
@@ -17,16 +17,16 @@ function Projects() {
           p="Html Css Js"
         />
         <ProjectCard
-          src={Barbearia}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Barbearia"
-          p="em construção"
+          src={Api}
+          link="https://github.com/Isaacovski/Api_Node.js_Typescript"
+          h3="ApiRestFull"
+          p="Node.js TypeScript"
         />
         <ProjectCard
-          src={salao}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Salão de beleza"
-          p="em construção"
+          src={Livraria}
+          link="https://github.com/Isaacovski/alura-books-server-final"
+          h3="Livraria_Api"
+          p="100% JavaScript"
         />
         <ProjectCard
           src={Loja}
