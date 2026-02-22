@@ -1,45 +1,56 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "./ContactStyles.module.css";
 
 function Contact() {
+  const formRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_wkn6pjr", // serviceID
+        "template_ksd33xe", // templateID
+        formRef.current, // form
+        "hCs2zaisqosRkdian", // public key
+      )
+      .then(
+        () => {
+          messageRef.current.textContent = "Mensagem enviada com sucesso ✅";
+
+          setTimeout(() => {
+            messageRef.current.textContent = "";
+          }, 5000);
+
+          e.target.reset();
+        },
+        () => {
+          messageRef.current.textContent = "Erro ao enviar mensagem ❌";
+        },
+      );
+  };
+
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form action="">
+
+      <form ref={formRef} onSubmit={sendEmail}>
         <div className="formGroup">
-          <label htmlFor="name" hidden>
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
+          <input type="text" name="name" placeholder="Name" required />
         </div>
+
         <div className="formGroup">
-          <label htmlFor="email" hidden>
-            Email
-          </label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
+          <input type="email" name="email" placeholder="Email" required />
         </div>
+
         <div className="formGroup">
-          <label htmlFor="message" hidden>
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Message"
-            required
-          ></textarea>
+          <textarea name="message" placeholder="Message" required />
         </div>
+
+        <p ref={messageRef} id="contact-message"></p>
+
         <input className="hover btn" type="submit" value="Submit" />
       </form>
     </section>

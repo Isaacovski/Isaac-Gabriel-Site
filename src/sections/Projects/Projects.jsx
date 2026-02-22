@@ -2,7 +2,7 @@ import styles from "./ProjectsStyles.module.css";
 import Jus from "../../assets/advogada.png";
 import Barbearia from "../../assets/Barbearia.png";
 import salao from "../../assets/salao de beleza.png";
-import Loja from "../../assets/loja de roupas.png";
+import Loja from "../../assets/loja de roupas.jpg";
 import ProjectCard from "../../common/ProjectCard";
 
 function Projects() {
@@ -12,27 +12,27 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard
           src={Jus}
-          link="https://github.com/Ade-mir/company-landing-page-2"
+          link="https://github.com/Isaacovski/site-juridico-freelancer"
           h3="Advocacia"
-          p="LandingPage"
+          p="Html Css Js"
         />
         <ProjectCard
           src={Barbearia}
           link="https://github.com/Ade-mir/company-landing-page-2"
           h3="Barbearia"
-          p="Html Css Js"
+          p="em construção"
         />
         <ProjectCard
           src={salao}
           link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Hipsster"
-          p="Glasses Shop"
+          h3="Salão de beleza"
+          p="em construção"
         />
         <ProjectCard
           src={Loja}
           link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="FitLift"
-          p="Fitness App"
+          h3="Loja De Roupas"
+          p=" em construção"
         />
       </div>
     </section>
