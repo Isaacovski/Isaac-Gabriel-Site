@@ -1,5 +1,5 @@
 import styles from "./HeroStyles.module.css";
-import HeroImg from "../../assets/hero-img.png";
+import HeroImg from "../../assets/IsaacWhite (5).jpg";
 import themeIcon from "../../assets/sun.svg";
 import twitterIcon from "../../assets/twitter-light.svg";
 import githubIcon from "../../assets/github-light.svg";

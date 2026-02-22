@@ -3,9 +3,9 @@ import Hero from "./sections/Hero/Hero";
 
 function App() {
   return (
-    <>
-      <Hero />
-    </>
+    <div>
+      <Hero></Hero>
+    </div>
   );
 }
 
