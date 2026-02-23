@@ -1,7 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import Jus from "../../assets/advogada.png";
 import Api from "../../assets/Api.png";
-import Livraria from "../../assets/Livraria.png";
+import Livraria from "../../assets/livraria.png";
 import Loja from "../../assets/loja de roupas.jpg";
 import ProjectCard from "../../common/ProjectCard";
 
