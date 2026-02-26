@@ -21,7 +21,6 @@ Este portfólio foi criado para mostrar meus projetos, estudos e evolução na �
 - ⚛️ **React**
 - 🎨 **CSS 
 - 🧠 **JavaScript (ES6+)**
-- 📦 **Node.js**
 
 ---
 
